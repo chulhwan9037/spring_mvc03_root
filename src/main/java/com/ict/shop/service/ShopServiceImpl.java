@@ -58,5 +58,9 @@ public class ShopServiceImpl implements ShopService{
 		return shopDAO.getCartDelete(Cart_idx);
 	}
 	
+	@Override
+	public int getProductInsert(ShopVO svo) throws Exception {
+		return shopDAO.getProductInsert(svo);
+	}
 
 }

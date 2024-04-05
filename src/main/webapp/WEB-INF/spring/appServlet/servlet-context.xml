@@ -21,7 +21,7 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
-	<context:component-scan base-package="com.ict" />
+	
 	
 	<!-- 파일업로드용 클래스 등록 -->
 	<beans:bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
@@ -29,6 +29,42 @@
 		<beans:property name="defaultEncoding" value="UTF-8" />
 	</beans:bean>
 	
+	<beans:bean id="log_inter" class="com.ict.common.LoginInterceptor" />
+	<interceptors >
+		<interceptor>
+			<mapping path="/gb_list.do"/>
+			<mapping path="/board_list.do"/>
+			<mapping path="/bbs_write.do"/>
+			<mapping path="/shop_list.do"/>
+			
+			<beans:ref bean="log_inter"/>
+		</interceptor>
+	</interceptors>		
 	
+	
+	<context:component-scan base-package="com.ict" />
 	
 </beans:beans>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

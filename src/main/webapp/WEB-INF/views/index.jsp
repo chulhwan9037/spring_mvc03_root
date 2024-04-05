@@ -18,6 +18,18 @@
 	function shop_go() {
 		location.href="shop_list.do";
 	}
+	function spring_ajax_go() {
+		location.href="spring_ajax_go.do";
+	}
+	function spring_ajax_go2() {
+		location.href="spring_ajax_go2.do";
+	}
+	function spring_sns_go() {
+		location.href="spring_sns_go.do";
+	}
+	function dynamic_query() {
+		location.href="dynamic_query.do";
+	}
 </script>
 
 </head>
@@ -26,5 +38,21 @@
 	<button onclick="bbs_go()">bbs게시판</button>
 	<button onclick="board_go()">보드게시판</button>
 	<button onclick="shop_go()">쇼핑몰</button>
+	<button onclick="spring_ajax_go()">Spring Ajax</button>
+	<button onclick="spring_ajax_go2()">Spring Ajax2</button>
+	<button onclick="spring_sns_go()">sns</button>
+	<button onclick="dynamic_query()">동적쿼리</button>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

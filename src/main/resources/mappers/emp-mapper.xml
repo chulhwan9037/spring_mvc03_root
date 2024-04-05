@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="emp">
+	<select id="emp_list" resultType="evo">
+		select * from employees where emp_no &gt;= 10001 and emp_no &lt;= 10020 order by emp_no
+	</select>
+	<select id="emp_search_list" resultType="evo" parameterMap="Map">
+	
+	</select>
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

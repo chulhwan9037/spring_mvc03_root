@@ -23,5 +23,7 @@ public interface ShopService {
 	
 	public int getCartDelete(String Cart_idx) throws Exception ;  
 	
+	public int getProductInsert(ShopVO svo) throws Exception;
+	
 	
 }

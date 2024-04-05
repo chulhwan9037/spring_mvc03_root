@@ -12,6 +12,16 @@ public class ShopVO {
 	// 파일 업로드
 	private MultipartFile file_s, file_l ;
 	
+	public MultipartFile[] getF_img() {
+		return f_img;
+	}
+
+	public void setF_img(MultipartFile[] f_img) {
+		this.f_img = f_img;
+	}
+
+	private MultipartFile[] f_img;
+	
 	// 장바구니
 	private int quant, totalPrice ;
 	

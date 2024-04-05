@@ -52,6 +52,20 @@ public class ShopDAO {
 		return sqlSessionTemplate.delete("shop.cart_delete", Cart_idx);
 	}
 
-	
+	public int getProductInsert(ShopVO svo) throws Exception {
+		return sqlSessionTemplate.insert("shop.product_insert", svo);
+	}
 	
 }
+
+
+
+
+
+
+
+
+
+
+
+
