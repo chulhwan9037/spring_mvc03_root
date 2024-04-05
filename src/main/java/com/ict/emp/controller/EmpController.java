@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -32,7 +33,7 @@ public class EmpController {
 	}
 
 	@PostMapping("emp_search.do")
-	public ModelAndView getEmpSearchList(String idx, String keyword) {
+	public ModelAndView getEmpSearchList(@ModelAttribute("idx")String idx, String keyword) {
 		try {
 			ModelAndView mv = new ModelAndView("emp/emp_searchlist");
 			List<EmpVO> searchlist = empService.getEmpSearchList(idx, keyword);

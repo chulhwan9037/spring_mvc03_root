@@ -29,7 +29,7 @@
 		<beans:property name="defaultEncoding" value="UTF-8" />
 	</beans:bean>
 	
-	<beans:bean id="log_inter" class="com.ict.common.LoginInterceptor" />
+	<!-- <beans:bean id="log_inter" class="com.ict.common.LoginInterceptor" />
 	<interceptors >
 		<interceptor>
 			<mapping path="/gb_list.do"/>
@@ -39,7 +39,7 @@
 			
 			<beans:ref bean="log_inter"/>
 		</interceptor>
-	</interceptors>		
+	</interceptors>		 -->
 	
 	
 	<context:component-scan base-package="com.ict" />

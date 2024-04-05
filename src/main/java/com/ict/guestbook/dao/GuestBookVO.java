@@ -59,6 +59,4 @@ public class GuestBookVO {
 		this.regdate = regdate;
 	}
 	
-	
-	
 }

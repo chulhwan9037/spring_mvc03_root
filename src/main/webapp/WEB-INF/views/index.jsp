@@ -42,6 +42,10 @@
 	<button onclick="spring_ajax_go2()">Spring Ajax2</button>
 	<button onclick="spring_sns_go()">sns</button>
 	<button onclick="dynamic_query()">동적쿼리</button>
+	<!-- 
+		1. summernote Editor 사용하기 위해서 라이브러리 다운받아서 webapp-resources 안에 넣기
+		
+	 -->
 </body>
 </html>
 

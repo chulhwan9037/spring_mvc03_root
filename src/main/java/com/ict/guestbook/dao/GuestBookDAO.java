@@ -8,57 +8,52 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public class GuestBookDAO {
-
-		@Autowired
-		private SqlSessionTemplate sqlSessionTemplate;
-		
-		public List<GuestBookVO> getGuestBookList() {
-			try {
-				return sqlSessionTemplate.selectList("guestbook.list");
-			} catch (Exception e) {
-				System.out.println(e);
-			}
-			return null;
+	@Autowired
+	private SqlSessionTemplate sqlSessionTemplate;
+	
+	public List<GuestBookVO> getGuestList() {
+		try {
+			return sqlSessionTemplate.selectList("guestbook.list");
+		} catch (Exception e) {
+			System.out.println(e);
 		}
-		
-		public GuestBookVO getGuestBookDetail(String idx) {
-			try {
-				return sqlSessionTemplate.selectOne("guestbook.detail", idx);
-			} catch (Exception e) {
-				System.out.println(e);
-			}
-			return null;
+		return null;
+	}
+	
+	public int getGuestInsert(GuestBookVO gvo) {
+		try {
+			return sqlSessionTemplate.insert("guestbook.insert", gvo);
+		} catch (Exception e) {
+			System.out.println(e);
 		}
-		
-		public int getGuestBookInsert(GuestBookVO gvo) {
-			try {
-				return sqlSessionTemplate.insert("guestbook.insert", gvo);
-			} catch (Exception e) {
-				System.out.println(e);
-			}
-			return -1;
+		return -1;
+	}
+	
+	public GuestBookVO getGuestDetail(String idx) {
+		try {
+			return sqlSessionTemplate.selectOne("guestbook.detail", idx);
+		} catch (Exception e) {
+			System.out.println(e);
 		}
-		
-		public int getGuestBookDelete(String idx) {
-			try {
-				return sqlSessionTemplate.delete("guestbook.delete", idx);
-			} catch (Exception e) {
-				System.out.println(e);
-			}
-			return -1;
+		return null;
+	}
+	
+	public int getGuestDelete(String idx) {
+		try {
+			return sqlSessionTemplate.delete("guestbook.delete",idx);
+		} catch (Exception e) {
+			System.out.println(e);
 		}
-		public int getGuestBookUpdate(GuestBookVO gvo) {
-			try {
-				return sqlSessionTemplate.delete("guestbook.update", gvo);
-			} catch (Exception e) {
-				System.out.println(e);
-			}
-			return -1;
+		return -1;
+	}
+	public int getGuestUpdate(GuestBookVO gvo) {
+		try {
+			return sqlSessionTemplate.update("guestbook.update",gvo);
+		} catch (Exception e) {
+			System.out.println(e);
 		}
-		
-		
-		
-		
+		return -1;
+	}
 }
 
 
